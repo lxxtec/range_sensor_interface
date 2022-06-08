@@ -17,15 +17,15 @@ Widget::Widget(QWidget *parent)
             QSurfaceDataRow *dataRow2 = new QSurfaceDataRow;
             static int i=0;
             if(i<500){
-                *dataRow1 << QVector3D(-0.2f*i/10.0, 0.4f, 0.3f*i/10.0) << QVector3D(0.2f*i, 0.4f, 0.2f*i);
-                *dataRow2 << QVector3D(-2.0f, 0.01f*i, 0.3f*i) << QVector3D(2.0f, 0.01f*i, 0.3f*i);
+                *dataRow1 << QVector3D(-0.02f*i/10.0, 0.4f, 0.03f*i/10.0) << QVector3D(0.02f*i, 0.4f, 0.02f*i);
+                *dataRow2 << QVector3D(-2.0f, 0.01f*i, 0.03f*i) << QVector3D(2.0f, 0.01f*i, 0.03f*i);
                 *data << dataRow1 << dataRow2;
                 i++;
             }
             modifier->m_dataProxy->resetArray(data);
           }
         );
-        //timer->start();
+        timer->start();
     }
 
     qDebug()<<" init graph ";
@@ -100,8 +100,8 @@ Widget::Widget(QWidget *parent)
                          modifier, &SurfaceGraph::toggleModeSliceColumn);
 
 
-        modifier->enableSqrtSinModel(true);
-
+       // modifier->enableSqrtSinModel(true);
+        modifier->enableDataModel(true);
     }
 
     qDebug()<<" init serial port ";

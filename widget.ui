@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1520</width>
-    <height>954</height>
+    <height>959</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -151,7 +151,7 @@
      <x>990</x>
      <y>830</y>
      <width>251</width>
-     <height>121</height>
+     <height>131</height>
     </rect>
    </property>
    <property name="title">
@@ -651,7 +651,7 @@
      <rect>
       <x>520</x>
       <y>130</y>
-      <width>91</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -801,7 +801,7 @@
      <x>940</x>
      <y>730</y>
      <width>20</width>
-     <height>221</height>
+     <height>231</height>
     </rect>
    </property>
    <property name="orientation">
@@ -814,7 +814,7 @@
      <x>252</x>
      <y>730</y>
      <width>21</width>
-     <height>221</height>
+     <height>231</height>
     </rect>
    </property>
    <property name="orientation">

@@ -43,6 +43,13 @@ const int heightMapGridStepZ = 6;
 const float sampleMin = -50.0f;
 const float sampleMax = 50.0f;
 
+const float Xmin=-10.0f;
+const float Xmax= 10.0f;
+const float Zmin=-10.0f;
+const float Zmax= 10.0f;
+const float Ymin= 0.0f;
+const float Ymax= 10.0f;
+
 SurfaceGraph::SurfaceGraph(Q3DSurface *surface)
     : m_graph(surface)
 {
@@ -87,9 +94,9 @@ void SurfaceGraph::enableDataModel(bool enable)
 
         m_graph->axisX()->setLabelFormat("%.3f");
         m_graph->axisZ()->setLabelFormat("%.3f");
-        m_graph->axisX()->setRange(sampleMin, sampleMax);
-        m_graph->axisY()->setRange(0.0f, 2.0f);
-        m_graph->axisZ()->setRange(sampleMin, sampleMax);
+        m_graph->axisX()->setRange(Xmin, Xmax);
+        m_graph->axisY()->setRange(Ymin, Ymax);
+        m_graph->axisZ()->setRange(Zmin, Zmax);
         m_graph->axisX()->setLabelAutoRotation(30);
         m_graph->axisY()->setLabelAutoRotation(45);
         m_graph->axisZ()->setLabelAutoRotation(30);
@@ -99,10 +106,10 @@ void SurfaceGraph::enableDataModel(bool enable)
         //! [3]
         //! [8]
         // Reset range sliders for Sqrt&Sin
-        m_rangeMinX = sampleMin;
-        m_rangeMinZ = sampleMin;
-        m_stepX = (sampleMax - sampleMin) / float(sampleCountX - 1);
-        m_stepZ = (sampleMax - sampleMin) / float(sampleCountZ - 1);
+        m_rangeMinX = Xmin;
+        m_rangeMinZ = Zmin;
+        m_stepX = (Xmax - Xmin) / float(sampleCountX - 1);
+        m_stepZ = (Zmax - Zmin) / float(sampleCountZ - 1);
         m_axisMinSliderX->setMaximum(sampleCountX - 2);
         m_axisMinSliderX->setValue(0);
         m_axisMaxSliderX->setMaximum(sampleCountX - 1);
